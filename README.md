@@ -29,7 +29,7 @@ say $ifconfig->ip_decimal();
 
 ### Author, Copyright
 
-Copyright (C) 2017 [Nicolas Doye](https://worldofnic.org)
+Copyright &#x24B8; 2017 [Nicolas Doye](https://worldofnic.org)
 
 ### License
 
