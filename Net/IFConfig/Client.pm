@@ -1,7 +1,8 @@
 use strict;
 use warnings;
 use 5.10.0;
-use feature qw/say switch/;
+use feature qw/switch/;
+
 use REST::Client;
 use JSON;
 
@@ -35,6 +36,8 @@ has '_raw_status' => (
 sub get_status {
     my $self = shift;
     my $answer;
+    no warnings "experimental::smartmatch";
+
     given ( $self->get_raw_status ) {
         $answer = undef when 0;
         $answer = 1 when 200;
