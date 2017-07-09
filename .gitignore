@@ -39,6 +39,7 @@ inc/
 
 # Editor Cruft
 .vscode
+.vstags
 .idea
 *~
 *.swp
