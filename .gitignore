@@ -52,5 +52,5 @@ inc/
 
 # Dist::Zilla dumps into the folder.
 /.build
-/Net-IFConfig-Client-*
-/Net-IFConfig-Client-*.tar.gz
+/WebService-IFConfig-Client-*
+/WebService-IFConfig-Client-*.tar.gz

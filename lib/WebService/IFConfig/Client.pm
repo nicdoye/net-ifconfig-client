@@ -7,17 +7,17 @@ use REST::Client;
 use JSON;
 
 use vars qw($VERSION);
-$VERSION = '0.001';
+$VERSION = '0.002';
 
 =head1 NAME
 
-Net::IFConfig::Client - Client for Martin Polden's https://ifconfig.co
+WebService::IFConfig::Client - Client for Martin Polden's https://ifconfig.co
 
 =head1 SYNOPSIS 
 
     use feature qw/say/;
-    use Net::IFConfig::Client;
-    my $ifconfig = Net::IFConfig::Client->new();
+    use WebService::IFConfig::Client;
+    my $ifconfig = WebService::IFConfig::Client->new();
 
     say $ifconfig->city;
     say $ifconfig->country;
@@ -38,12 +38,12 @@ To use a different server, pass C<'server' =E<gt> $my_server>.
 
 =cut
 
-package Net::IFConfig::Client;
+package WebService::IFConfig::Client;
 use Moose;
 
 =head1 METHODS
 
-=head2 Net::IFConfig::Client->new( 'run' =E<gt> $boolean , 'server' =E<gt> $my_server );
+=head2 WebService::IFConfig::Client->new( 'run' =E<gt> $boolean , 'server' =E<gt> $my_server );
 
 Constructor to create an new client. Default values are
 

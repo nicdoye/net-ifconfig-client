@@ -17,8 +17,8 @@ Unless you are hosting your own copy of the service, the canonical instance at h
 
 ```
 use feature qw/say/;
-use Net::IFConfig::Client;
-my $ipconfig = Net::IFConfig::Client->new();
+use WebService::IFConfig::Client;
+my $ipconfig = WebService::IFConfig::Client->new();
 
 say $ifconfig->city();
 say $ifconfig->country();

@@ -25,17 +25,17 @@ my $client;
 SKIP: {
     skip('test prereqs not met') unless $run_tests;
 
-    $test_server = Net::IFConfig::TestServer->new($port);
+    $test_server = WebService::IFConfig::TestServer->new($port);
     my $pid         = $test_server->background();
 
     eval {
         BEGIN {
             unshift @INC, "../lib";
-            use_ok( 'Net::IFConfig::Client',
-                'Can use Net::IFConfig::Client' );
+            use_ok( 'WebService::IFConfig::Client',
+                'Can use WebService::IFConfig::Client' );
         }
 
-        my $class = 'Net::IFConfig::Client';
+        my $class = 'WebService::IFConfig::Client';
 
         my %correct = (
             'ip'         => qq/192.0.2.0/,
@@ -47,8 +47,8 @@ SKIP: {
 
         subtest 'Can create client' => sub {
             plan tests => 3;
-            $client = Net::IFConfig::Client->new( 'run' => 0 );
-            isa_ok $client, 'Net::IFConfig::Client', 'Client';
+            $client = WebService::IFConfig::Client->new( 'run' => 0 );
+            isa_ok $client, 'WebService::IFConfig::Client', 'Client';
 
             ok( $client, "Client returned from new()" );
 
@@ -64,7 +64,7 @@ SKIP: {
 
         # Valid local server
         my $local_url = "${local_server}/json";
-        $client = Net::IFConfig::Client->new( 'server' => $local_url );
+        $client = WebService::IFConfig::Client->new( 'server' => $local_url );
 
         # Poor coding using sleep. One of my pet hates, in fact.
         # I don't know how to check for local server being ready.
@@ -90,7 +90,7 @@ SKIP: {
         };
 
         undef $client;
-        $client = Net::IFConfig::Client->new(
+        $client = WebService::IFConfig::Client->new(
             'server' => $local_url,
             'run'    => 0
         );
@@ -122,7 +122,7 @@ done_testing();
 exit;
 
 # Almost a direct copy of REST::Client::TestServer Rest::Client-273 t/basic.t
-package Net::IFConfig::TestServer;
+package WebService::IFConfig::TestServer;
 
 use parent 'HTTP::Server::Simple::CGI';
 
@@ -201,4 +201,3 @@ EOF
 }
 
 1;
-    
