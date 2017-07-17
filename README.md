@@ -1,4 +1,4 @@
-# net-ifconfig-client
+# Perl5 Module WebService::IFConfig::Client
 Client for [Martin Polden](https://github.com/mpolden)'s [IP address lookup service](https://ifconfig.co).
 
 ## Note:
