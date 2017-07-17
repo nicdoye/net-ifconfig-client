@@ -43,3 +43,14 @@ inc/
 .idea
 *~
 *.swp
+
+# perltidy
+*.bak
+
+# pod
+*.tmp
+
+# Dist::Zilla dumps into the folder.
+/.build
+/Net-IFConfig-Client-*
+/Net-IFConfig-Client-*.tar.gz
