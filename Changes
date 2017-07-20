@@ -1,3 +1,6 @@
+0.005 2017.07.20
+* Change to using use experimental. See http://blogs.perl.org/users/mike_b/2013/06/a-little-nicer-way-to-use-smartmatch-on-perl-518.html
+
 0.004 2017.07.20
 * Add a Changes file as recommended by https://cpants.cpanauthors.org/kwalitee/has_changelog
 

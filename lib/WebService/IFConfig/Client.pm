@@ -7,7 +7,7 @@ use REST::Client;
 use JSON;
 
 use vars qw($VERSION);
-$VERSION = '0.004';
+$VERSION = '0.005';
 
 =head1 NAME
 
@@ -40,6 +40,7 @@ To use a different server, pass C<'server' =E<gt> $my_server>.
 
 package WebService::IFConfig::Client;
 use Moose;
+use experimental qw/switch/;
 
 =head1 METHODS
 
@@ -121,7 +122,6 @@ Returns undef if no request has been made.
 sub get_status {
     my $self = shift;
     my $answer;
-    no warnings "experimental::smartmatch";
 
     given ( $self->get_raw_status ) {
         $answer = undef when 0;
