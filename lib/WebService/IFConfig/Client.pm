@@ -1,13 +1,12 @@
 use strict;
 use warnings;
-use 5.10.0;
-use feature qw/switch/;
+use 5.12.0;
 
 use REST::Client;
 use JSON;
 
 use vars qw($VERSION);
-$VERSION = '0.005';
+$VERSION = '0.006';
 
 =head1 NAME
 
