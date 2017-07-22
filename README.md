@@ -20,11 +20,11 @@ use feature qw/say/;
 use WebService::IFConfig::Client;
 my $ipconfig = WebService::IFConfig::Client->new();
 
-say $ifconfig->city();
-say $ifconfig->country();
-say $ifconfig->hostname();
-say $ifconfig->ip();
-say $ifconfig->ip_decimal();
+say $ifconfig->get_city();
+say $ifconfig->get_country();
+say $ifconfig->get_hostname();
+say $ifconfig->get_ip();
+say $ifconfig->get_ip_decimal();
 ```
 
 ### Author, Copyright
