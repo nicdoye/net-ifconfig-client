@@ -6,7 +6,7 @@ use REST::Client;
 use JSON;
 
 use vars qw($VERSION);
-$VERSION = '1.000';
+$VERSION = '1.001';
 
 =head1 NAME
 
