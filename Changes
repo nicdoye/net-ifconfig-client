@@ -1,5 +1,6 @@
 1.001 2017.07.26
 * Markdown cleanup from markdownlint https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint
+* Documentation bugs
 
 1.000 2017.07.26
 * Bump version for release
